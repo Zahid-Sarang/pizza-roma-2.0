@@ -1,13 +1,24 @@
+//* Packages Import //
+import SideBar from "@/components/sidebar/SideBar";
 import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 	return (
-		<div>
-			<h1 className="bg-draftBg w-20 h-8 m-20 items-center flex justify-center rounded-md relative text-draft">
-				Draft
-			</h1>
-			<Outlet />
-		</div>
+		<section className="flex w-screen h-screen">
+			{/* Dasboard */}
+			<SideBar />
+			<div className="w-screen">
+				{/* Header */}
+				<header className="bg-white h-15">
+					<h1>Your are an admin</h1>
+				</header>
+
+				{/* Outlet components */}
+				<main>
+					<Outlet />
+				</main>
+			</div>
+		</section>
 	);
 };
 export default Dashboard;

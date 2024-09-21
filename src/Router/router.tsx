@@ -1,10 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../Layout/Root";
-import Dashboard from "../Layout/Dashboard";
-import Home from "../Pages/HomePage";
-import NonAuth from "../Layout/NonAuth";
-import LoginPage from "../Pages/LoginPage";
+
+//* Components Import *//
+
+import Dashboard from "@/layout/Dashboard";
+import Home from "@/pages/home";
 import ProtectedRoute from "./Protected";
+import NonAuth from "@/layout/NonAuth";
+import LoginPage from "@/pages/login";
+import Root from "@/layout/Root";
 
 export const router = createBrowserRouter([
 	{

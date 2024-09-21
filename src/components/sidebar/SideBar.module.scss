@@ -1,0 +1,15 @@
+.sidebar {
+	@apply bg-white max-w-[200px] min-w-[200px] w-[200px] rounded-lg;
+
+	.logo {
+		@apply p-5;
+	}
+
+	.menuList {
+		@apply pl-2 space-y-6;
+
+		.menuListItem {
+			@apply flex flex-row items-center gap-2 m-5 text-[14px];
+		}
+	}
+}
