@@ -9,11 +9,13 @@ export default {
 				black: "#222222",
 				lavenderPurple: "#b591ef",
 				lightGray: "#f5f6f7",
+				outlineGray: "#E8E6E6",
 				darkIndigo: "#2d1e69",
 				charcoalBlack: "#262626",
 				charcoalGray: "#222A2E",
 				lightGreen: "#D9F3E9",
 				primaryBg: "#f3f2f7",
+				greenText: "#21BA87",
 
 				// Toasts
 				error: "#EE4D3C",

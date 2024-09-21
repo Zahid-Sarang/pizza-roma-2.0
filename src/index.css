@@ -4,4 +4,5 @@
 
 body {
 	@apply bg-primaryBg;
+	@apply font-sans;
 }

@@ -8,6 +8,7 @@ import ProtectedRoute from "./Protected";
 import NonAuth from "@/layout/NonAuth";
 import LoginPage from "@/pages/login";
 import Root from "@/layout/Root";
+import Users from "@/pages/users";
 
 export const router = createBrowserRouter([
 	{
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
 							{
 								path: "",
 								element: <Home />,
+							},
+							{
+								path: "/users",
+								element: <Users />,
 							},
 						],
 					},

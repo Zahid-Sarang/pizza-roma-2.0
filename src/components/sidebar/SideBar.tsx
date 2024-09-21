@@ -1,5 +1,5 @@
 //* Packages Imports *//
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 //* Icons Imports *//
 import Home from "@/assets/icons/Home";
@@ -12,64 +12,74 @@ import GiftIcon from "@/assets/icons/GiftIcon";
 
 //* Styles Import *//
 import Styles from "./SideBar.module.scss";
+import { clsx } from "clsx";
 
 const menuListConfig = [
 	{
 		key: "/",
 		icon: <Home />,
-		label: <NavLink to="/">Home</NavLink>,
+		label: "Home",
 	},
 	{
 		key: "/users",
 		icon: <UserIcon />,
-		label: <NavLink to="/users">Users</NavLink>,
+		label: "Users",
 		allowedTo: ["admin"],
 	},
 	{
 		key: "/restaurants",
 		icon: <FoodIcon />,
-		label: <NavLink to="/restaurants">Restaurants</NavLink>,
+		label: "Restaurants",
 		allowedTo: ["admin"],
 	},
 	{
-		key: "/order",
+		key: "/orders",
 		icon: <BasketIcon />,
-		label: <NavLink to="/orders">Orders</NavLink>,
+		label: "Orders",
 	},
 	{
 		key: "/products",
 		icon: <FoodIcon />,
-		label: <NavLink to="/products">Products</NavLink>,
+		label: "Products",
 	},
 	{
-		key: "/category",
+		key: "/categories",
 		icon: <CategoryIcon />,
-		label: <NavLink to="/products">Category</NavLink>,
+		label: "Categories",
 		allowedTo: ["admin"],
 	},
 	{
 		key: "/toppings",
 		icon: <ToppingIcon />,
-		label: <NavLink to="/toppings">Toppings</NavLink>,
+		label: "Toppings",
 	},
 	{
 		key: "/coupons",
 		icon: <GiftIcon />,
-		label: <NavLink to="/coupons">Coupons</NavLink>,
+		label: "Coupons",
 	},
 ];
 
 const SideBar = () => {
+	const location = useLocation();
+
 	return (
 		<aside className={Styles.sidebar}>
-			<h1 className={Styles.logo}>Logo - Pizza Roma </h1>
-			<div>
-				<ul className={Styles.menuList}>
+			<h1 className={Styles.logo}>
+				<span className="text-greenText">Pizza</span> Roma
+			</h1>
+			<div className={Styles.menuList}>
+				<ul>
 					{menuListConfig.map((list, index) => (
-						<li key={index} className={Styles.menuListItem}>
-							<span>{list.icon}</span>
-							<span>{list.label}</span>
-						</li>
+						<NavLink to={list.key}>
+							<li
+								key={index}
+								className={clsx(Styles.menuListItem, location.pathname === list.key ? Styles.active : Styles.unActive)}
+							>
+								<span>{list.icon}</span>
+								<span>{list.label}</span>
+							</li>
+						</NavLink>
 					))}
 				</ul>
 			</div>
