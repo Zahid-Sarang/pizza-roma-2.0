@@ -1,0 +1,63 @@
+.homeContainer {
+	@apply m-5;
+
+	.greeting {
+		@apply text-xl font-medium text-charcoalGray;
+	}
+	.content {
+		@apply grid grid-flow-col mt-4;
+
+		.orderInfo {
+			@apply flex flex-col;
+
+			.orderTotals {
+				@apply grid grid-flow-col;
+
+				.sales {
+					@apply bg-white rounded-lg mr-4 shadow-sm;
+
+					.headig {
+						@apply flex items-center justify-start gap-4 p-5;
+
+						.text {
+							@apply text-lightCharcoal;
+						}
+					}
+				}
+			}
+		}
+
+		.salesStats {
+			@apply bg-white rounded-lg mr-4 shadow-sm mt-4;
+
+			.statsHeading {
+				@apply flex items-center justify-start gap-4 p-5 border-b border-gray-200;
+			}
+		}
+
+		.recentInfo {
+			@apply bg-white rounded-lg mr-4 shadow-sm;
+
+			.recentOrders {
+				@apply flex items-center justify-start gap-4 p-5 border-b border-gray-200;
+			}
+			.ordersList {
+				@apply flex justify-between my-4 mx-6 border-b border-gray-200 pb-5;
+
+				.orderStatus {
+					@apply px-3 border rounded-lg h-7;
+				}
+				.preparing {
+					@apply border-blueStatusBorder bg-blueStatusBg text-blueStatus;
+				}
+				.onTheWay {
+					@apply border-redStatusBorder bg-redStatusBg text-redStatus;
+				}
+
+				.delivered {
+					@apply border-greenStatusBorder bg-greenStatusBg text-greenStatus;
+				}
+			}
+		}
+	}
+}
