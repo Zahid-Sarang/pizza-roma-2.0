@@ -16,6 +16,8 @@ export default {
 				lightGreen: "#D9F3E9",
 				primaryBg: "#f3f2f7",
 				greenText: "#21BA87",
+				tomatoRed: "#FD4955",
+				tomatoRedBg: "#F5DCE0",
 
 				// Toasts
 				error: "#EE4D3C",

@@ -1,0 +1,27 @@
+.headerContainer {
+	@apply h-16 bg-white flex justify-between items-center;
+
+	.status {
+		@apply ml-4 text-sm text-charcoalBlack leading-[64px];
+
+		.statusTitle {
+			@apply h-[6px] w-[6px] bg-greenStatus rounded-[50%] relative inline-block mr-2 items-center;
+		}
+	}
+
+	.headerRightSide {
+		@apply inline-flex items-center gap-4 mr-5 text-[14px];
+
+		.notificationDot {
+			@apply h-[6px] w-[6px] bg-greenStatus rounded-[50%] absolute;
+			transform: translate(170%, -70%);
+		}
+
+		.logout {
+			@apply text-blueStatus relative flex justify-center leading-[30px] bg-blueStatusBg items-center rounded-full h-8 w-8;
+		}
+		.logoutBtn {
+			@apply absolute text-tomatoRed cursor-pointer top-full transform -translate-x-1/2 bg-white mt-1 shadow-xl rounded-md p-2 w-20 text-center font-semibold border;
+		}
+	}
+}
