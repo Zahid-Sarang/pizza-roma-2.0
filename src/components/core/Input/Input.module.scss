@@ -1,0 +1,47 @@
+.inputContainer {
+	@apply flex flex-col items-start gap-[6px];
+
+	.label {
+		@apply min-w-32 text-xs font-medium text-greenText;
+	}
+
+	.input {
+		@apply w-full text-sm border rounded-md placeholder:font-normal placeholder:text-lightCharcoal
+            focus:outline-none disabled:cursor-not-allowed;
+
+		&.solid {
+			@apply border-borderGray focus:border-greenText;
+
+			&:enabled {
+				&:hover {
+					@apply border-greenText;
+				}
+			}
+		}
+
+		&.error {
+			@apply border-error;
+
+			&:enabled {
+				&:hover {
+					@apply border-error;
+				}
+			}
+		}
+	}
+	textarea {
+		height: unset !important;
+	}
+}
+
+.labelLeft {
+	@apply flex-row items-center;
+}
+
+.helperText {
+	@apply flex mt-1 text-xs text-error;
+}
+
+.labelLeftHelper {
+	@apply ml-[8.5rem] flex-row items-center;
+}

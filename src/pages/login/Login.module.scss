@@ -1,0 +1,16 @@
+.container {
+	@apply flex justify-center items-center h-screen flex-col gap-7;
+	.logo {
+		@apply font-extrabold text-charcoalGray;
+	}
+	.loginCard {
+		@apply bg-white rounded rounded-md;
+	}
+	.cardTitle {
+		@apply flex p-2 gap-4 items-center justify-center border-b border-b-outlineGray;
+	}
+
+	input[type="checkbox"] {
+		accent-color: green;
+	}
+}

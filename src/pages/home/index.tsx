@@ -89,7 +89,12 @@ const Home = () => {
 						</div>
 					))}
 					<div className="p-5">
-						<span className="ml-2 font-semibold underline cursor-pointer text-tomatoRed">See all orders</span>
+						<span
+							style={{ cursor: "pointer" }}
+							className="ml-2 font-semibold underline transition-colors duration-500 text-tomatoRed hover:text-draft"
+						>
+							See all orders
+						</span>
 					</div>
 				</div>
 			</div>

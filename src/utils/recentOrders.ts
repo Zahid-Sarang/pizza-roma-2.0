@@ -1,3 +1,5 @@
+export const user = null;
+
 export const recentOrdersList = [
 	{
 		OrderSummary: "Peperoni, Margarita ...",
